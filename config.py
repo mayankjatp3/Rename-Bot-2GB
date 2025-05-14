@@ -4,8 +4,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
+    API_ID    = os.environ.get("API_ID", "23159366")
+    API_HASH  = os.environ.get("API_HASH", "4623dd30dd1303bddb729eb0862262d9")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
    
     # database config
@@ -15,12 +15,12 @@ class Config(object):
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://envs.sh/jUp.jpg")
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '5222155765').split()]
 
     # channels logs
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "TechifyBots") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", ""))
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "WarriorUnitsBots") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001987727042"))
+    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", "-1001987727042"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
